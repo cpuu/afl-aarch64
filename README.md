@@ -11,9 +11,9 @@
    ```
    
 3. Manual command:
-```
-$ docker run --rm -v /home/cpuu/afl-aarch64/io:/home/afl/io -v /home/cpuu/afl-aarch64/tests:/home/afl/tests afl-aarch64 -m none -Q -i /home/afl/tests/vuln/seeds -o /home/afl/io /home/afl/tests/vuln/vuln @@
-```
+   ```
+   $ docker run --rm -v /home/cpuu/afl-aarch64/io:/home/afl/io -v /home/cpuu/afl-aarch64/tests:/home/afl/tests afl-aarch64 -m none -Q -i /home/afl/tests/vuln/seeds -o /home/afl/io /home/afl/tests/vuln/vuln @@
+   ```
 
 ### Example 1
 
