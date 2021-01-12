@@ -1,4 +1,4 @@
-### Dockerized AFL for Aarch64 Binaries
+### Dockerized AFL for Aarch64 Binaries using QEMU
 
 1. Build docker
    ```
