@@ -18,7 +18,12 @@
 ### Example 1
 
 ```
-rm -rf ./io
-./run.sh io tests/vuln/seeds tests/vuln/vuln @@
+$ rm -rf ./io
+$ ./run.sh io tests/vuln/seeds tests/vuln/vuln @@
 ```
 
+### Example 2 
+```
+$ rm -rf ./io
+$ ./run.sh io tests/aql/seeds/ tests/aql/test_aql_plain.exe @@
+```
