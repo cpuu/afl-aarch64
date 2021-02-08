@@ -27,7 +27,7 @@ $ ./run.sh io tests/aql/seeds/ tests/aql/test_aql_plain.exe @@
 
 1) Run Docker container and go inside
 ```
-$ docker run -v /Users/cpuu/afl-aarch64/tests:/home/afl/teststs -it afl-aarch64 bash
+$ docker run -v /home/cpuu/afl-aarch64/tests:/home/afl/teststs -it afl-aarch64 bash
 root@05d86b4444e8:/home/afl#
 ```
 2) Fuzz with qemu-aarch64
