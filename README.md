@@ -24,22 +24,18 @@ $ ./run.sh io tests/aql/seeds/ tests/aql/test_aql_plain.exe @@
 ```
 
 ## 3. Manual command:
-1) Change ENTRYPOINT in Dockefile 'afl-fuzz' -> 'bash'
-2) Re-build 
+
+1) Run Docker container and go inside
 ```
-$ docker build -t afl-aarch64 .
-```
-3) Run Docker container and go inside
-```
-$ docker run -v /Users/cpuu/afl-aarch64/tests:/home/afl/teststs -it afl-aarch64 
+$ docker run -v /Users/cpuu/afl-aarch64/tests:/home/afl/teststs -it afl-aarch64 bash
 root@05d86b4444e8:/home/afl#
 ```
-4) Fuzz with qemu-aarch64
+2) Fuzz with qemu-aarch64
 ```
 root@05d86b4444e8:/home/afl# mkdir output/
 root@05d86b4444e8:/home/afl# afl-fuzz -m none -Q -i ./teststs/aql/seeds/ -o ./output/ ./teststs/aql/test_aql_plain.exe @@
 ```
-5) Check crash inputs
+3) Check crash inputs
 ```
 # ./teststs/aql/test_aql_plain.exe ./output/crashes/id\:000000\,sig\:06\,src\:000000\,op\:havoc\,rep\:2 
 -----------------------------
