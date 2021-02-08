@@ -16,6 +16,6 @@ BINNAME=$(basename $BINPATH)
 cp $BINPATH $IODIR/
 cp $SEEDDIR/* $IODIR/in/
 
-docker run --rm -v $IODIR:/home/afl/io afl-aarch64 -m none -Q \
+docker run --rm -v $IODIR:/home/afl/io afl-aarch64 afl-fuzz -m none -Q \
     -i /home/afl/io/in \
     -o /home/afl/io/out -- "/home/afl/io/$BINNAME" "${@:4}"

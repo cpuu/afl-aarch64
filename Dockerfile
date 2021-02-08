@@ -21,5 +21,3 @@ RUN AFL_NO_X86=1 make install
 WORKDIR /home/afl/
 
 ENV QEMU_LD_PREFIX /usr/aarch64-linux-gnu
-
-ENTRYPOINT ["afl-fuzz"]
