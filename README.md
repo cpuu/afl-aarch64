@@ -2,7 +2,9 @@
 
 ## 1. Build docker
    ```
-   docker build -t afl-aarch64 .
+   $ git clone https://github.com/cpuu/afl-aarch64.git
+   $ cd afl-aarch64/
+   $ docker build -t afl-aarch64 .
    ```
 
 ## 2. Run afl with the script:
