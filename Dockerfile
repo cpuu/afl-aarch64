@@ -15,6 +15,7 @@ RUN git clone https://github.com/pwndbg/pwndbg.git
 WORKDIR /home/afl/pwndbg
 RUN ./setup.sh
 
+WORKDIR /home/afl
 RUN git clone https://github.com/google/AFL.git
 WORKDIR /home/afl/AFL
 
