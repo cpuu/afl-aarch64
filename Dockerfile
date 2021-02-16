@@ -6,10 +6,14 @@ RUN cd /etc/apt && \
 RUN apt-get update && \
     apt-get install -y git wget unzip libglib2.0-dev libeina-dev \
     qemu-user qemu-user-static binutils-aarch64-linux-gnu binutils-aarch64-linux-gnu-dbg build-essential  \
-    gcc-aarch64-linux-gnu g++-aarch64-linux-gnu qemu-system-arm libtool-bin python automake bison vim
+    gcc-aarch64-linux-gnu g++-aarch64-linux-gnu qemu-system-arm gdb-multiarch libtool-bin python automake bison vim
 
 RUN mkdir /home/afl/
 WORKDIR /home/afl
+
+RUN git clone https://github.com/pwndbg/pwndbg.git
+WORKDIR /home/afl/pwndbg
+RUN ./setup.sh
 
 RUN git clone https://github.com/google/AFL.git
 WORKDIR /home/afl/AFL
