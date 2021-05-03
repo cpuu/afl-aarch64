@@ -22,7 +22,7 @@ $ ./run.sh 15 io tests/vuln/seeds tests/vuln/vuln @@
 ### Example 2 - aql
 ```
 $ rm -rf ./io
-$ ./run.sh 15 io tests/aql/seeds/ tests/aql/test_aql_plain.exe @@
+$ ./run.sh 60 io tests/aql/seeds/ tests/aql/test_aql_plain.exe @@
 ```
 
 ## 3. Manual command:
