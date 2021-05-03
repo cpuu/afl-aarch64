@@ -9,20 +9,20 @@
 
 ## 2. Run afl with the script:
    ```
-   ./run.sh <io dir name> <seed dir name> <binary path> <args ...>
+   ./run.sh <timeout> <io dir name> <seed dir name> <binary path> <args ...>
    ```
 
 ### Example 1 - vuln
 
 ```
 $ rm -rf ./io
-$ ./run.sh io tests/vuln/seeds tests/vuln/vuln @@
+$ ./run.sh 15 io tests/vuln/seeds tests/vuln/vuln @@
 ```
 
 ### Example 2 - aql
 ```
 $ rm -rf ./io
-$ ./run.sh io tests/aql/seeds/ tests/aql/test_aql_plain.exe @@
+$ ./run.sh 15 io tests/aql/seeds/ tests/aql/test_aql_plain.exe @@
 ```
 
 ## 3. Manual command:
