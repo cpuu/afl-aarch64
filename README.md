@@ -29,13 +29,13 @@ $ ./run.sh 60 io tests/aql/seeds/ tests/aql/test_aql_plain.exe @@
 
 1) Run Docker container and go inside
 ```
-$ docker run -v /home/cpuu/afl-aarch64/tests:/home/afl/teststs -it afl-aarch64 bash
+$ docker run --entrypoint="bash" -v /home/ubuntu/afl-aarch64/tests:/home/afl/tests -it afl-aarch64
 root@05d86b4444e8:/home/afl#
 ```
 2) Fuzz with qemu-aarch64
 ```
 root@05d86b4444e8:/home/afl# mkdir output/
-root@05d86b4444e8:/home/afl# afl-fuzz -m none -Q -i ./teststs/aql/seeds/ -o ./output/ ./teststs/aql/test_aql_plain.exe @@
+root@05d86b4444e8:/home/afl# afl-fuzz -m none -Q -i ./tests/aql/seeds/ -o ./output/ ./tests/aql/test_aql_plain.exe @@
 ```
 3) Check crash inputs
 ```
