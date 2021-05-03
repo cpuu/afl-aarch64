@@ -19,10 +19,10 @@ RUN AFL_NO_X86=1 make
 RUN cd qemu_mode && CPU_TARGET=aarch64 ./build_qemu_support.sh
 RUN AFL_NO_X86=1 make install
 
-WORKDIR /home/afl
-RUN git clone https://github.com/pwndbg/pwndbg.git
-WORKDIR /home/afl/pwndbg
-RUN ./setup.sh
+#WORKDIR /home/afl
+#RUN git clone https://github.com/pwndbg/pwndbg.git
+#WORKDIR /home/afl/pwndbg
+#RUN ./setup.sh
 
 
 WORKDIR /home/afl/
