@@ -8,7 +8,7 @@ RUN apt-get update && \
     qemu-user qemu-user-static binutils-aarch64-linux-gnu binutils-aarch64-linux-gnu-dbg build-essential  \
     gcc-aarch64-linux-gnu g++-aarch64-linux-gnu qemu-system-arm gdb-multiarch libtool-bin python automake bison vim
 
-RUN useradd -u 1000 -m -d /home/afl afl
+RUN useradd -u 1001 -m -d /home/afl afl
 WORKDIR /home/afl
 RUN git clone https://github.com/google/AFL.git
 ADD afltimeout.sh /home/afl/AFL
@@ -25,6 +25,7 @@ RUN AFL_NO_X86=1 make install
 #RUN ./setup.sh
 
 
+USER afl
 WORKDIR /home/afl/
 
 ENV QEMU_LD_PREFIX /usr/aarch64-linux-gnu
